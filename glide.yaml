@@ -1,0 +1,14 @@
+package: .
+import:
+- package: gopkg.in/alecthomas/kingpin.v2
+  version: ~2.2.2
+- package: github.com/cleversoap/go-cp
+- package: github.com/jondot/runs
+- package: github.com/rwcarlsen/goexif
+- package: github.com/docopt/docopt-go
+  version: ^0.6.2
+testImport:
+- package: gopkg.in/check.v1
+- package: github.com/stretchr/testify
+  subpackages:
+  - mock
