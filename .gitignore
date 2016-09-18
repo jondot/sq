@@ -5,3 +5,4 @@ go-carpet-coverage-out*
 release/
 fgroup
 sq
+.DS_Store

@@ -1,5 +1,7 @@
 # sq - Magical File Grouping
 
+![](sq-in-action.gif)
+
 `sq` finds and groups sequence of file runs that naturally belong together.
 With `sq` you can:
 
