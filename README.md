@@ -26,17 +26,18 @@ You can then proceed to run `sq` on a sample directory. Don't worry, by default
 it will only *show* you what it wants to do, and it won't actually do it.
 
 ```
-$ sq -g ~/Downloads -d 100
+$ cd ~/Downloads
+$ sq -g '*.*' -d 100
 ```
 
 Explore how `sq` have created groups, by separating groups of files that are
 more than `-d 100` seconds apart. Makes sense? now let's see what you can do
-with it!
+with it.
 
 
 ## Distance
 
-The concept of **distance*** is very important for `sq`. It separates groups by their
+The concept of **distance** is very important for `sq`. It separates groups by their
 natural distance; it can be file time, exif date, or anything it can parse into
 a number from a file name (see the `--format` and `--layout` flags).
 
