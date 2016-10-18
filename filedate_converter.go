@@ -21,10 +21,10 @@ func (e *FiledateConverter) String(text string) string {
 }
 
 // Convert t
-func (e *FiledateConverter) Convert(text string) int64 {
+func (e *FiledateConverter) Convert(text string) uint64 {
 	fi, err := os.Stat(text)
 	if err != nil {
 		log.Fatalf("Cannot stat file [%s]: %v\n", text, err)
 	}
-	return fi.ModTime().Unix()
+	return uint64(fi.ModTime().Unix())
 }

@@ -7,5 +7,5 @@ func (s *CLISuite) TestDefaultFiledateConverter(c *C) {
 	f := NewFiledateConverter()
 
 	c.Check(f.String(test), Equals, "1473694698")
-	c.Check(f.Convert(test), Equals, int64(1473694698))
+	c.Check(f.Convert(test), Equals, uint64(1473694698))
 }

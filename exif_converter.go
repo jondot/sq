@@ -24,7 +24,7 @@ func (e *ExifConverter) String(text string) string {
 }
 
 // Convert t
-func (e *ExifConverter) Convert(text string) int64 {
+func (e *ExifConverter) Convert(text string) uint64 {
 	exif.RegisterParsers(mknote.All...)
 	f, err := os.Open(text)
 	defer f.Close()
@@ -33,5 +33,5 @@ func (e *ExifConverter) Convert(text string) int64 {
 		log.Fatal(err)
 	}
 	tm, _ := x.DateTime()
-	return tm.Unix()
+	return uint64(tm.Unix())
 }

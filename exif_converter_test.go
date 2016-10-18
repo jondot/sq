@@ -7,5 +7,5 @@ func (s *CLISuite) TestDefaultExifConverter(c *C) {
 	f := NewExifConverter()
 
 	c.Check(f.String(test), Equals, "1464842241")
-	c.Check(f.Convert(test), Equals, int64(1464842241))
+	c.Check(f.Convert(test), Equals, uint64(1464842241))
 }

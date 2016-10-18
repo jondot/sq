@@ -64,9 +64,9 @@ Examples:
 	for _, file := range matches {
 		things = append(things, file)
 	}
-	grouped := runs.Detect(things, func(thing interface{}) int64 {
+	grouped := runs.Detect(things, func(thing interface{}) uint64 {
 		return c.Convert(thing.(string))
-	}, func(a, b int64) bool {
+	}, func(a, b uint64) bool {
 		return math.Abs(float64(a-b)) < dist
 	})
 

@@ -29,12 +29,12 @@ func NewFormatConverter(re string, subs string) *FormatConverter {
 }
 
 // Convert tbd
-func (f *FormatConverter) Convert(text string) int64 {
+func (f *FormatConverter) Convert(text string) uint64 {
 	if f.TimeLayout != "" {
-		return f.time(text, f.TimeLayout).Unix()
+		return uint64(f.time(text, f.TimeLayout).Unix())
 	}
 
-	return f.int(text)
+	return uint64(f.int(text))
 }
 
 // String t
@@ -43,13 +43,13 @@ func (f *FormatConverter) String(text string) string {
 }
 
 // Int t
-func (f *FormatConverter) int(text string) int64 {
+func (f *FormatConverter) int(text string) uint64 {
 	s := f.String(text)
 	res, err := strconv.Atoi(s)
 	if err != nil {
 		log.Fatalf("Cannot parse integer value from [%s]\n", s)
 	}
-	return int64(res)
+	return uint64(res)
 }
 
 // Time t

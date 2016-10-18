@@ -14,7 +14,7 @@ fgroup --glob . --format "(.*)/DSC_(.*).jpg --> $1-$2" --timestamp "DD-MM"
 
 // Converter t
 type Converter interface {
-	Convert(string) int64
+	Convert(string) uint64
 	String(string) string
 }
 
